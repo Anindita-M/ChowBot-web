@@ -1,25 +1,94 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <meta charset="UTF-8" />
-  <title>ChowBot - Food Finder</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-    }
-  </style>
-</head>
-<body>
-  <h1>Welcome to ChowBot 🍔</h1>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>ChowBot - Food Finder</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* 🌟 Page Reset */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
 
-  <!-- Dialogflow Messenger -->
-  <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
-  <df-messenger
-    chat-icon="https://cdn-icons-png.flaticon.com/512/1046/1046784.png"
-    intent="WELCOME"
-    chat-title="ChowBot"
-    agent-id="e38b8dda-e0fd-4f46-8ae1-b79caa659b8b"
-    language-code="en"
-  ></df-messenger>
-</body>
+      /* 🧭 Background */
+      body {
+        font-family: 'Poppins', sans-serif;
+        background: linear-gradient(
+            rgba(0, 0, 0, 0.4),
+            rgba(0, 0, 0, 0.6)
+          ),
+          url('https://images.unsplash.com/photo-1600891964599-f61ba0e24092?auto=format&fit=crop&w=1400&q=80')
+            no-repeat center center/cover;
+        color: white;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 0 20px;
+      }
+
+      /* 🏷️ Title */
+      h1 {
+        font-size: 3rem;
+        margin-bottom: 20px;
+        letter-spacing: 1px;
+        text-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+      }
+
+      /* 📝 Subtitle */
+      p {
+        font-size: 1.2rem;
+        max-width: 600px;
+        margin-bottom: 40px;
+        color: #f5f5f5;
+        text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+      }
+
+      /* 🧭 Footer */
+      footer {
+        position: absolute;
+        bottom: 20px;
+        font-size: 0.9rem;
+        color: #ddd;
+      }
+
+      /* 💬 Dialogflow Chat */
+      df-messenger {
+        --df-messenger-bot-message: #f5f5f5;
+        --df-messenger-button-titlebar-color: #ff4b2b;
+        --df-messenger-chat-background-color: #fff;
+        --df-messenger-font-color: #333;
+        --df-messenger-send-icon: #ff4b2b;
+        --df-messenger-user-message: #ff4b2b;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>🍔 Welcome to ChowBot</h1>
+    <p>
+      Your personal food guide. Find the best places to eat around you.<br />
+      Ask me for cafes, desserts, street food and more!
+    </p>
+
+    <!-- Footer -->
+    <footer>© 2025 ChowBot | Made with ❤️ in India</footer>
+
+    <!-- Dialogflow Messenger -->
+    <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+    <df-messenger
+      chat-icon="https://cdn-icons-png.flaticon.com/512/1046/1046784.png"
+      intent="WELCOME"
+      chat-title="ChowBot"
+      agent-id="e38b8dda-e0fd-4f46-8ae1-b79caa659b8b"
+      language-code="en"
+    ></df-messenger>
+  </body>
 </html>
